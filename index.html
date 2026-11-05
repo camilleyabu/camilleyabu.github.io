@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camille Yabu</title>
+  <meta name="description" content="Camille Yabu: Computer Engineering at UC Santa Cruz, building ML for biotech, and making music on the side." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <a href="#top" class="logo">CY<span>.</span></a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#creative">Creative</a></li>
+      <li><a href="#contact" class="pill">Say hi</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <canvas id="helix" aria-hidden="true"></canvas>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+
+    <div class="hero-inner">
+      <p class="eyebrow">hi, i'm</p>
+      <h1 class="name">
+        <span class="word">Camille</span>
+        <span class="word outline">Yabu</span>
+      </h1>
+      <p class="say">(kah · mee · ole)</p>
+      <p class="tagline">
+        Computer Engineering @ UC Santa Cruz. I build
+        <mark class="m-pink">machine learning</mark> for
+        <mark class="m-lime">biotech</mark> and
+        <mark class="m-blue">healthcare</mark>, then go home and write songs.
+      </p>
+      <div class="cta-row">
+        <a href="#projects" class="btn btn-ink">See my work</a>
+        <a href="assets/Camille_Yabu_Resume.pdf" class="btn btn-ghost" target="_blank">Resume ↗</a>
+      </div>
+    </div>
+    <p class="hint">move your cursor ✦</p>
+  </header>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Python</span><span>✦</span><span>PyTorch</span><span>✦</span><span>LLM agents</span><span>✦</span>
+      <span>MCP</span><span>✦</span><span>SQL</span><span>✦</span><span>React Native</span><span>✦</span>
+      <span>Firebase</span><span>✦</span><span>C</span><span>✦</span><span>Verilog</span><span>✦</span>
+      <span>Songwriting</span><span>✦</span><span>Video</span><span>✦</span>
+      <span>Python</span><span>✦</span><span>PyTorch</span><span>✦</span><span>LLM agents</span><span>✦</span>
+      <span>MCP</span><span>✦</span><span>SQL</span><span>✦</span><span>React Native</span><span>✦</span>
+      <span>Firebase</span><span>✦</span><span>C</span><span>✦</span><span>Verilog</span><span>✦</span>
+      <span>Songwriting</span><span>✦</span><span>Video</span><span>✦</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <h2 class="section-title"><span class="num">01</span> About</h2>
+      <div class="about-grid">
+        <div class="card about-card reveal">
+          <p>
+            I'm a fourth year Computer Engineering student at UC Santa Cruz with a Systems Programming concentration and a Computer Science minor,
+            on the BS/MS 4+1 pathway. I care about using ML to make science move faster and
+            to make diagnostics more accessible, especially in computational biology and genomics.
+          </p>
+          <p>
+            Outside of code I write songs, make videos, work on a novel called <em>Parallel</em>,
+            and help run alpha Kappa Delta Phi as VP External.
+          </p>
+        </div>
+        <div class="stats reveal">
+          <div class="stat s-pink"><b>4+1</b><span>BS/MS track</span></div>
+          <div class="stat s-lime"><b>ML</b><span>for biotech</span></div>
+          <div class="stat s-blue"><b>VP</b><span>External, aKDPhi</span></div>
+          <div class="stat s-orange"><b>♪</b><span>songwriter</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section">
+      <h2 class="section-title"><span class="num">02</span> Experience</h2>
+      <div class="timeline">
+        <article class="card job reveal">
+          <div class="job-head">
+            <h3>AI Software Engineer Intern <span class="when">Summer 2026</span></h3>
+            <span class="tag t-blue">Sierra Space · Louisville, CO</span>
+          </div>
+          <ul>
+            <li>Architected and deployed an enterprise AI agent translating natural language to SQL across production databases, with under 2 second response time.</li>
+            <li>Engineered semantic schema filtering and a NoSQL caching pipeline that cut LLM token use by <b>97%</b> while keeping 100% accuracy.</li>
+            <li>Implemented an On Behalf Of token exchange flow for per user security and audit logging, and built <b>3</b> production MCP servers with OAuth 2.0.</li>
+            <li>Trained a PyTorch EfficientNet B2 PCB classifier with focal loss and benchmarked it against Azure Custom Vision.</li>
+          </ul>
+        </article>
+        <article class="card job reveal">
+          <div class="job-head">
+            <h3>Software Developer <span class="when">Oct 2025 to Jun 2026</span></h3>
+            <span class="tag t-pink">ReCat</span>
+          </div>
+          <ul>
+            <li>Built and shipped React Native and TypeScript features from Figma designs and Linear tickets.</li>
+            <li>Integrated Firebase Authentication and Firestore for cloud backed sessions and persistent data.</li>
+          </ul>
+        </article>
+        <article class="card job reveal">
+          <div class="job-head">
+            <h3>Concessions Operations Technology Intern</h3>
+            <span class="tag t-orange">Levy Restaurants · Levi's Stadium</span>
+          </div>
+          <ul>
+            <li>Supported concessions technology and operations on 49ers home game days.</li>
+          </ul>
+        </article>
+        <article class="card job reveal">
+          <div class="job-head">
+            <h3>AI Research Fellow <span class="when">Jan 2026 to Apr 2026</span></h3>
+            <span class="tag t-purple">Handshake</span>
+          </div>
+          <ul>
+            <li>Evaluated AI outputs across audio, visual, and text tasks, setting a quality baseline that guided model improvements.</li>
+            <li>Wrote golden solutions and adversarial test cases for complex software tasks, uncovering gaps in LLM evaluation.</li>
+          </ul>
+        </article>
+        <article class="card job reveal">
+          <div class="job-head">
+            <h3>Researcher</h3>
+            <span class="tag t-lime">Algoverse AI Research</span>
+          </div>
+          <ul>
+            <li>Research team project; proposed "Why Did It Fail? Finding the Causes of Performance Drops in Medical Imaging AI."</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <h2 class="section-title"><span class="num">03</span> Projects</h2>
+      <div class="filters" role="tablist">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="ml">ML / AI</button>
+        <button class="chip" data-filter="app">Apps</button>
+        <button class="chip" data-filter="hack">Hackathons</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project tilt reveal" data-cat="ml">
+          <div class="p-art art-1"><span>SQL</span></div>
+          <h3>Text to SQL Agent</h3>
+          <p>Ask a production database a question in plain English. Semantic schema filtering sends the model only the tables that matter, cutting tokens by 97% with answers in under 2 seconds.</p>
+          <div class="tags"><span>LLMs</span><span>MCP</span><span>OAuth</span></div>
+        </article>
+
+        <article class="card project tilt reveal" data-cat="ml">
+          <div class="p-art art-2"><span>PCB</span></div>
+          <h3>PCB Classifier</h3>
+          <p>EfficientNet B2 trained in PyTorch with focal loss for class imbalance, benchmarked against Azure Custom Vision.</p>
+          <div class="tags"><span>PyTorch</span><span>CV</span></div>
+        </article>
+
+        <article class="card project tilt reveal" data-cat="ml">
+          <div class="p-art art-3"><span>📈</span></div>
+          <h3>ML Stock Prediction</h3>
+          <p>End to end pipeline predicting next day returns for AAPL and NVDA from 19 engineered features, benchmarking Random Forest, LSTM, and Transformer encoder models.</p>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>TensorFlow</span><span>Alpaca API</span></div>
+          <a href="https://github.com/camilleyabu/ML-Based-Stock-Market-Prediction-Model" class="link" target="_blank">Code ↗</a>
+        </article>
+
+        <article class="card project tilt reveal" data-cat="app">
+          <div class="p-art art-4"><span>ReCat</span></div>
+          <h3>ReCat</h3>
+          <p>React Native and TypeScript features shipped from Figma designs, including a partner pairing flow and onboarding emails.</p>
+          <div class="tags"><span>React Native</span><span>TypeScript</span><span>Firebase</span></div>
+        </article>
+
+        <article class="card project tilt reveal" data-cat="app">
+          <div class="p-art art-5"><span>⌂</span></div>
+          <h3>CircleHome</h3>
+          <p>Household task app. As Product Owner on a five person Scrum team, I led planning and demos and built recurring tasks with real time Firestore feeds.</p>
+          <div class="tags"><span>Dart</span><span>Flutter</span><span>Firebase</span></div>
+        </article>
+
+        <article class="card project tilt reveal" data-cat="hack">
+          <div class="p-art art-6"><span>🎣</span></div>
+          <h3>Phish-Or-Friend</h3>
+          <p>Roblox phishing game built at LAHacks. Fetch.ai uAgents generate scam and safe scenarios with adaptive difficulty from a real time Python backend.</p>
+          <div class="tags"><span>Luau</span><span>Python</span><span>Fetch.ai</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CREATIVE ============ -->
+    <section id="creative" class="section creative">
+      <h2 class="section-title"><span class="num">04</span> Off the clock</h2>
+      <p class="lede">The other half of my brain.</p>
+
+      <div class="creative-grid">
+        <!-- Music -->
+        <article class="card music reveal">
+          <div class="music-top">
+            <div class="disc" aria-hidden="true">♪</div>
+            <div>
+              <h3>Music as kami</h3>
+              <p class="muted">songs i write &amp; produce, on every platform</p>
+            </div>
+          </div>
+          <iframe class="spotify" src="https://open.spotify.com/embed/artist/2IzAKBy3nguxz0pGCrEWNP?utm_source=generator&amp;theme=0"
+            title="kami on Spotify" height="352" loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <a href="https://open.spotify.com/artist/2IzAKBy3nguxz0pGCrEWNP" class="link" target="_blank">kami on Spotify ↗</a>
+        </article>
+
+        <!-- YouTube -->
+        <article class="card yt reveal">
+          <h3>YouTube</h3>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/wbknBbgBrkQ" title="YouTube video" loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <a href="https://youtu.be/wbknBbgBrkQ" class="link" target="_blank">Watch on YouTube ↗</a>
+        </article>
+
+        <!-- Instagram -->
+        <article class="card insta reveal">
+          <h3>Instagram</h3>
+          <!-- To use real photos: put them in assets/ and swap a tile for <img class="ig" src="assets/photo1.jpg" alt=""> -->
+          <div class="ig-grid">
+            <div class="ig g1"></div><div class="ig g2"></div><div class="ig g3"></div>
+            <div class="ig g4"></div><div class="ig g5"></div><div class="ig g6"></div>
+          </div>
+          <a href="https://instagram.com/camilleyabu" class="link" target="_blank">@camilleyabu ↗</a>
+        </article>
+
+        <!-- Writing -->
+        <article class="card novel reveal">
+          <h3><em>Parallel</em></h3>
+          <p class="muted">a novel in progress</p>
+          <p>Anna is a scientist. Jason is an artist. Somewhere between their realities, there's another version of each of them.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="card contact-card reveal">
+        <h2>Let's build something.</h2>
+        <p>Open to summer 2027 internships in ML, biotech, and anywhere the work matters.</p>
+        <div class="cta-row">
+          <a href="mailto:camillehyabu@gmail.com" class="btn btn-ink">Email me</a>
+          <a href="https://www.linkedin.com/in/camille-yabu/" class="btn btn-ghost" target="_blank">LinkedIn ↗</a>
+          <a href="https://github.com/camilleyabu" class="btn btn-ghost" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>made by camille ✦ <span id="year"></span></p>
+  </footer>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
