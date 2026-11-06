@@ -288,6 +288,7 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
 .project:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -22px var(--glow-a); }
 .project:hover::before { transform: scaleX(1); }
 .project.hidden { display: none; }
+.project.wide { grid-column: 1 / -1; }
 .p-kind { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); }
 .project h3 { font-size: 1.15rem; font-weight: 600; }
 .project p { font-size: .95rem; color: var(--muted); flex: 1; }
