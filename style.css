@@ -275,9 +275,9 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
 }
 .chip:hover { border-color: var(--muted); color: var(--ink); }
 .chip.active { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-ink); }
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .project {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px;
   display: flex; flex-direction: column; gap: 10px; position: relative; overflow: hidden;
   transition: transform .2s, box-shadow .2s, border-color .2s;
 }
