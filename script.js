@@ -32,16 +32,9 @@ document.querySelectorAll("#projects .chip").forEach((chip) => {
     document.querySelectorAll(".project").forEach((p) => {
       p.classList.toggle("hidden", f !== "all" && p.dataset.cat !== f);
     });
-    balanceProjects();
   });
 });
-// odd number of visible cards: let the first one span the full row so the grid stays even
-function balanceProjects() {
-  const shown = [...document.querySelectorAll(".project:not(.hidden)")];
-  shown.forEach((p) => p.classList.remove("wide"));
-  if (shown.length % 2 === 1) shown[0].classList.add("wide");
-}
-balanceProjects();
+
 
 // ===== Experience tabs =====
 document.querySelectorAll(".exp-tabs .chip").forEach((tab) => {
