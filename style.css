@@ -359,11 +359,12 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
 .kami-spark { width: 120px; height: 120px; margin: -30px 0 -26px -34px; filter: drop-shadow(0 0 14px rgba(111, 163, 255, .35)); }
 .kami-name {
   font-family: var(--serif); font-weight: 400; letter-spacing: .06em;
-  font-size: clamp(4.5rem, 12vw, 8.5rem); line-height: .9;
+  font-size: clamp(3rem, 6.4vw, 5.2rem); line-height: .95; letter-spacing: .02em; white-space: nowrap;
 }
 .kami-lily { display: none; width: 56px; height: 56px; margin-bottom: 4px; }
 :root[data-theme="light"] .kami-spark { display: none; }
 :root[data-theme="light"] .kami-lily { display: block; }
+.kami-name .hash { color: var(--accent); font-style: italic; letter-spacing: 0; }
 .kami .edu-label { margin-top: 10px; }
 .platforms { max-width: 360px; }
 .kami .link { margin-top: 10px; }
