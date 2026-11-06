@@ -19,6 +19,7 @@
   --grain: .07;
   --spark-on: 1;
   --lily-on: 0;
+  --gold: #d9b56f;
   color-scheme: dark;
 }
 :root[data-theme="light"] {
@@ -41,6 +42,7 @@
   --grain: 0;
   --spark-on: 0;
   --lily-on: 1;
+  --gold: #d9a7b5;
   color-scheme: light;
 }
 
@@ -114,6 +116,7 @@ button { font: inherit; color: inherit; }
 :root[data-theme="light"] .g-b { opacity: .4; }
 :root[data-theme="light"] .btn-primary:hover { background: #2e1f25; }
 :root[data-theme="light"] .name .dot { background: none; color: var(--accent); }
+:root[data-theme="dark"] .name .dot { background: none; color: var(--gold); }
 
 /* lilies (light mode) */
 .lilies {
@@ -133,23 +136,21 @@ button { font: inherit; color: inherit; }
   50% { transform: rotate(5deg); }
 }
 
-.sparks { position: absolute; inset: 0; pointer-events: none; opacity: var(--spark-on); transition: opacity .4s; }
-.s {
-  position: absolute; color: var(--spark);
-  filter: drop-shadow(0 0 6px var(--spark-shadow)) drop-shadow(0 0 18px var(--spark-shadow));
-  animation: twinkle 5s ease-in-out infinite;
+.celestial {
+  position: absolute; top: 60px; right: max(0px, calc(50% - 600px));
+  width: min(560px, 50vw); height: calc(100% - 60px);
+  pointer-events: none; opacity: var(--spark-on); transition: opacity .4s;
 }
-.s1 { width: 64px; height: 64px; right: 22%; top: 24%; }
-.s2 { width: 28px; height: 28px; right: 12%; top: 44%; animation-delay: -1.2s; }
-.s3 { width: 40px; height: 40px; right: 34%; top: 62%; animation-delay: -2.4s; }
-.s4 { width: 16px; height: 16px; right: 8%;  top: 20%; animation-delay: -3s; }
-.s5 { width: 14px; height: 14px; right: 40%; top: 32%; animation-delay: -.6s; }
-.s6 { width: 22px; height: 22px; right: 18%; top: 76%; animation-delay: -3.8s; }
-.s7 { width: 10px; height: 10px; right: 28%; top: 50%; animation-delay: -1.8s; }
-@keyframes twinkle {
-  0%, 100% { opacity: .9; transform: scale(1) rotate(0deg); }
-  50% { opacity: .35; transform: scale(.7) rotate(12deg); }
-}
+.celestial svg { width: 100%; height: 100%; overflow: visible; }
+.sun-wrap use { filter: drop-shadow(0 0 22px rgba(217, 181, 111, .25)); }
+.sun-rays { transform-box: view-box; transform-origin: 100px 100px; animation: spin 140s linear infinite; }
+.pendant { transform-box: view-box; transform-origin: 215px 0; animation: swing 7s ease-in-out infinite; }
+.chains use, .celestial > svg > use { animation: twinkle 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.celestial > svg > use:nth-of-type(2n) { animation-delay: -2s; }
+.celestial > svg > use:nth-of-type(3n) { animation-delay: -4s; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes swing { 0%, 100% { transform: rotate(-1.6deg); } 50% { transform: rotate(1.6deg); } }
+@keyframes twinkle { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
 
 .hero-inner { position: relative; width: min(1040px, 100%); margin: 0 auto; }
 .eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .05em; color: var(--muted); text-transform: uppercase; }
@@ -257,10 +258,7 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
     var(--surface);
 }
 .kami-head { position: relative; display: flex; flex-direction: column; gap: 8px; }
-.kami-spark {
-  width: 34px; height: 34px; color: var(--spark); margin-bottom: 4px;
-  filter: drop-shadow(0 0 8px var(--spark-shadow));
-}
+.kami-spark { width: 120px; height: 120px; margin: -30px 0 -26px -34px; filter: drop-shadow(0 0 14px rgba(111, 163, 255, .35)); }
 .kami-name {
   font-family: var(--serif); font-weight: 400; letter-spacing: .06em;
   font-size: clamp(4.5rem, 12vw, 8.5rem); line-height: .9;
@@ -301,6 +299,12 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
     radial-gradient(80% 100% at 90% 110%, color-mix(in srgb, var(--glow-b) 26%, transparent), transparent 60%),
     var(--surface);
 }
+.contact-sun {
+  position: absolute; width: 360px; height: 360px; left: 50%; top: -150px; translate: -50% 0;
+  opacity: calc(var(--spark-on) * .22); pointer-events: none;
+}
+.contact-card > :not(.contact-sun) { position: relative; }
+.job .link { display: inline-block; margin-top: 12px; }
 .contact-card h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1.05; margin-bottom: 12px; }
 .contact-card p { color: var(--muted); max-width: 460px; margin: 0 auto; }
 .contact-card .cta-row { justify-content: center; }
@@ -329,8 +333,7 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
   .nav-links a { display: block; padding: 10px 0; font-size: 1rem; }
   .g-a { right: -40%; top: 0; }
   .g-b { right: -10%; top: 50%; }
-  .s1 { right: 8%; top: 16%; width: 44px; height: 44px; }
-  .s3, .s5, .s7 { display: none; }
+  .celestial { width: 90vw; right: -28%; opacity: calc(var(--spark-on) * .4); }
   .lilies { width: 70vw; right: -18%; height: 60%; top: 64px; bottom: auto; opacity: calc(var(--lily-on) * .45); }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .job { grid-template-columns: 1fr; gap: 6px; }
