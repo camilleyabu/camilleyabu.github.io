@@ -59,6 +59,32 @@ document.querySelectorAll(".exp-panel").forEach((panel) => {
   }));
 });
 
+// ===== Skills: filter by source, hover to see where a skill comes from =====
+const SOURCES = {sierra:"Sierra Space",recat:"ReCat",handshake:"Handshake",algoverse:"Algoverse",projects:"Projects",courses:"Coursework"};
+const skills = document.querySelectorAll(".skill");
+const caption = document.querySelector(".skill-caption");
+let activeSrc = "all";
+function describe(el) {
+  const from = el.dataset.from.split(" ").filter(Boolean).map((s) => SOURCES[s]);
+  caption.innerHTML = `<b>${el.textContent}</b> · ${from.length ? from.join(" · ") : "also in my toolkit"}`;
+}
+skills.forEach((el) => {
+  el.addEventListener("pointerenter", () => describe(el));
+  el.addEventListener("focus", () => describe(el));
+  el.addEventListener("pointerleave", () => { caption.innerHTML = "&nbsp;"; });
+});
+document.querySelectorAll(".skill-src .chip").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".skill-src .chip").forEach((c) => c.classList.toggle("active", c === chip));
+    activeSrc = chip.dataset.src;
+    skills.forEach((el) => {
+      const on = activeSrc === "all" || el.dataset.from.split(" ").includes(activeSrc);
+      el.classList.toggle("dim", !on);
+      el.classList.toggle("hit", on && activeSrc !== "all");
+    });
+  });
+});
+
 // ===== Videos: click a thumbnail to play it in place =====
 document.querySelectorAll(".vid").forEach((btn) => {
   btn.addEventListener("click", () => {
