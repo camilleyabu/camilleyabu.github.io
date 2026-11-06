@@ -24,15 +24,31 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
 // ===== Project filters =====
-document.querySelectorAll(".chip").forEach((chip) => {
+document.querySelectorAll("#projects .chip").forEach((chip) => {
   chip.addEventListener("click", () => {
-    document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+    document.querySelectorAll("#projects .chip").forEach((c) => c.classList.remove("active"));
     chip.classList.add("active");
     const f = chip.dataset.filter;
     document.querySelectorAll(".project").forEach((p) => {
       p.classList.toggle("hidden", f !== "all" && p.dataset.cat !== f);
     });
   });
+});
+
+// ===== Experience tabs =====
+document.querySelectorAll(".exp-tabs .chip").forEach((tab) => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".exp-tabs .chip").forEach((t) => t.classList.toggle("active", t === tab));
+    document.querySelectorAll(".exp-panel").forEach((p) => p.classList.toggle("active", p.dataset.panel === tab.dataset.tab));
+  });
+});
+document.querySelectorAll(".exp-panel").forEach((panel) => {
+  const items = panel.querySelectorAll(".exp-item");
+  const cards = panel.querySelectorAll(".exp-card");
+  items.forEach((item) => item.addEventListener("click", () => {
+    items.forEach((i) => i.classList.toggle("active", i === item));
+    cards.forEach((c) => c.classList.toggle("active", c.dataset.i === item.dataset.i));
+  }));
 });
 
 // ===== Videos: click a thumbnail to play it in place =====

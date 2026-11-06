@@ -88,7 +88,6 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Experience</a></li>
-          <li><a href="#leadership">Leadership</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#music">Music</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -194,152 +193,175 @@
     </section>
 
     <section id="work" class="section">
-      <h2 class="section-title"><span class="num">02</span>Technical Experience</h2>
-      <div class="timeline">
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Aug 2026 – Present</span></div>
-          <div>
-            <h3>AI/ML Researcher <span class="org">Algoverse AI Research</span></h3>
+      <h2 class="section-title"><span class="num">02</span>Experience</h2>
+      <div class="filters exp-tabs" role="tablist">
+        <button class="chip active" role="tab" data-tab="tech">Technical <span class="count">4</span></button>
+        <button class="chip" role="tab" data-tab="lead">Leadership <span class="count">5</span></button>
+        <button class="chip" role="tab" data-tab="other">Other <span class="count">5</span></button>
+      </div>
+      <div class="exp-panel active" data-panel="tech">
+        <div class="exp-list">
+          <button class="exp-item active" data-i="0"><span class="exp-role">AI/ML Researcher</span><span class="exp-org">Algoverse AI Research</span><span class="exp-when">Aug 2026 – Present</span></button>
+          <button class="exp-item" data-i="1"><span class="exp-role">AI Software Engineer Intern</span><span class="exp-org">Sierra Space</span><span class="exp-when">Jun – Aug 2026</span></button>
+          <button class="exp-item" data-i="2"><span class="exp-role">AI Research Fellow</span><span class="exp-org">Handshake</span><span class="exp-when">Jan – Apr 2026</span></button>
+          <button class="exp-item" data-i="3"><span class="exp-role">Software Developer</span><span class="exp-org">ReCat</span><span class="exp-when">Oct 2025 – Jun 2026</span></button>
+        </div>
+        <div class="exp-detail">
+          <article class="exp-card active" data-i="0">
+            <p class="exp-meta">Aug 2026 – Present</p>
+            <h3>AI/ML Researcher</h3>
+            <p class="exp-org-big">Algoverse AI Research</p>
             <ul>
               <li>Co-authoring <em>Local Error to Collective Failure</em>, a study of when multi-agent LLM debate stops correcting a single seeded false claim, measuring adoption and correction in debate versus solo revision.</li>
               <li>Own the model layer, the multi-agent debate loop, and constructed reasoning prefixes, running quantized open models such as Qwen3 4B on GSM8K.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta">
-            <span class="when">Jun – Aug 2026</span>
-            <span class="where">Louisville, CO</span>
-          </div>
-          <div>
-            <h3>AI Software Engineer Intern <span class="org">Sierra Space</span></h3>
+          </article>
+          <article class="exp-card" data-i="1">
+            <p class="exp-meta">Jun – Aug 2026 · Louisville, CO</p>
+            <h3>AI Software Engineer Intern</h3>
+            <p class="exp-org-big">Sierra Space</p>
             <ul>
               <li>Architected and deployed an enterprise AI agent translating natural language to SQL across production databases, with under 2 second response time.</li>
               <li>Engineered semantic schema filtering and a NoSQL caching pipeline that cut LLM token use by <b>97%</b> while keeping 100% accuracy.</li>
               <li>Implemented an On Behalf Of token exchange flow for per user security and audit logging, and built <b>3</b> production MCP servers with OAuth 2.0.</li>
               <li>Trained a PyTorch EfficientNet B2 PCB classifier with focal loss and benchmarked it against Azure Custom Vision.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Jan – Apr 2026</span></div>
-          <div>
-            <h3>AI Research Fellow <span class="org">Handshake</span></h3>
+          </article>
+          <article class="exp-card" data-i="2">
+            <p class="exp-meta">Jan – Apr 2026 · Remote</p>
+            <h3>AI Research Fellow</h3>
+            <p class="exp-org-big">Handshake</p>
             <ul>
               <li>Evaluated AI outputs across audio, visual, and text tasks, setting a quality baseline that guided model improvements.</li>
               <li>Wrote golden solutions and adversarial test cases for complex software tasks, uncovering gaps in LLM evaluation.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Oct 2025 – Jun 2026</span></div>
-          <div>
-            <h3>Software Developer <span class="org">ReCat</span></h3>
+          </article>
+          <article class="exp-card" data-i="3">
+            <p class="exp-meta">Oct 2025 – Jun 2026 · Remote</p>
+            <h3>Software Developer</h3>
+            <p class="exp-org-big">ReCat</p>
             <ul>
               <li>Built and shipped React Native and TypeScript features from Figma designs and Linear tickets.</li>
-              <li>Integrated Firebase Authentication and Firestore for cloud backed sessions and persistent data.</li>
+              <li>Integrated Firebase Authentication and Firestore for cloud backed sessions and persistent data across iOS and Android.</li>
+              <li>Designed and built the partner pairing screen, translating Figma mockups into a production-ready UI.</li>
             </ul>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
-    </section>
-
-    <section id="other" class="section">
-      <h2 class="section-title"><span class="num">03</span>Other Experience</h2>
-      <div class="timeline">
-        <article class="job reveal">
-          <div class="job-meta">
-            <span class="when">Sep 2026 – Present</span>
-            <span class="where">Santa Clara, CA</span>
-          </div>
-          <div>
-            <h3>Concessions Operations Technology Intern <span class="org">Levy Restaurants · Levi's Stadium</span></h3>
+      <div class="exp-panel" data-panel="lead">
+        <div class="exp-list">
+          <button class="exp-item active" data-i="0"><span class="exp-role">Vice President External</span><span class="exp-org">alpha Kappa Delta Phi</span><span class="exp-when">Jan – Jun 2025</span></button>
+          <button class="exp-item" data-i="1"><span class="exp-role">Vice President Internal</span><span class="exp-org">alpha Kappa Delta Phi</span><span class="exp-when">Jan – Jun 2025</span></button>
+          <button class="exp-item" data-i="2"><span class="exp-role">Treasurer</span><span class="exp-org">alpha Kappa Delta Phi</span><span class="exp-when">Jan – Jun 2025</span></button>
+          <button class="exp-item" data-i="3"><span class="exp-role">Fundraising Chair</span><span class="exp-org">alpha Kappa Delta Phi</span><span class="exp-when">Jul – Dec 2024</span></button>
+          <button class="exp-item" data-i="4"><span class="exp-role">Convention Chair &amp; Co-Rush Chair</span><span class="exp-org">alpha Kappa Delta Phi</span><span class="exp-when">Jan – Dec 2024</span></button>
+        </div>
+        <div class="exp-detail">
+          <article class="exp-card active" data-i="0">
+            <p class="exp-meta">Jan – Jun 2025 · UC Santa Cruz</p>
+            <h3>Vice President External</h3>
+            <p class="exp-org-big">alpha Kappa Delta Phi</p>
+            <ul>
+              <li>Connected the chapter with the outside world: other aKDPhi chapters, campus organizations, and community partners, coordinating collaborations and representing the chapter externally.</li>
+            </ul>
+          </article>
+          <article class="exp-card" data-i="1">
+            <p class="exp-meta">Jan – Jun 2025 · UC Santa Cruz</p>
+            <h3>Vice President Internal</h3>
+            <p class="exp-org-big">alpha Kappa Delta Phi</p>
+            <ul>
+              <li>Partnered with the President to run chapter operations for a 15–20 member chapter, meeting monthly with the Northwest Governor.</li>
+              <li>Organized workshops on mental health, domestic violence, and Asian awareness, including a book event with an author’s immigration story.</li>
+              <li>Mentored new officers and members to keep leadership continuous.</li>
+            </ul>
+          </article>
+          <article class="exp-card" data-i="2">
+            <p class="exp-meta">Jan – Jun 2025 · UC Santa Cruz</p>
+            <h3>Treasurer</h3>
+            <p class="exp-org-big">alpha Kappa Delta Phi</p>
+            <ul>
+              <li>Managed chapter budgeting, expenses, and financial records.</li>
+              <li>Oversaw payments for events, fundraisers, and operations in line with university and national rules.</li>
+            </ul>
+          </article>
+          <article class="exp-card" data-i="3">
+            <p class="exp-meta">Jul – Dec 2024 · UC Santa Cruz</p>
+            <h3>Fundraising Chair</h3>
+            <p class="exp-org-big">alpha Kappa Delta Phi</p>
+            <ul>
+              <li>Ran three fundraisers, including “Boba for Boobs,” raising $1,000+ in revenue and $500+ net for breast cancer research.</li>
+              <li>Handled logistics, promotion, preorders, and UC compliance, and marketed across social media and campus channels.</li>
+            </ul>
+          </article>
+          <article class="exp-card" data-i="4">
+            <p class="exp-meta">Jan – Dec 2024 · UC Santa Cruz</p>
+            <h3>Convention Chair &amp; Co-Rush Chair</h3>
+            <p class="exp-org-big">alpha Kappa Delta Phi</p>
+            <ul>
+              <li>Voting delegate for the UCSC Delta Chapter at the national convention; managed convention travel and budget.</li>
+              <li>Helped plan recruitment events, logistics, and promotion for prospective members.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="exp-panel" data-panel="other">
+        <div class="exp-list">
+          <button class="exp-item active" data-i="0"><span class="exp-role">Concessions Operations Technology Intern</span><span class="exp-org">Levy Restaurants · Levi's Stadium</span><span class="exp-when">Sep 2026 – Present</span></button>
+          <button class="exp-item" data-i="1"><span class="exp-role">Dental Intern</span><span class="exp-org">San Francisco Dental Wellness</span><span class="exp-when">Jun – Aug 2025</span></button>
+          <button class="exp-item" data-i="2"><span class="exp-role">COVID Screening Coordinator</span><span class="exp-org">Geraldine A. Lim, D.D.S. &amp; Eric M. Yabu, D.D.S.</span><span class="exp-when">May – Aug 2020</span></button>
+          <button class="exp-item" data-i="3"><span class="exp-role">Barista</span><span class="exp-org">Noodle Time</span><span class="exp-when">Jun – Aug 2025</span></button>
+          <button class="exp-item" data-i="4"><span class="exp-role">Cashier</span><span class="exp-org">i-Tea</span><span class="exp-when">Jun 2022 – Aug 2023</span></button>
+        </div>
+        <div class="exp-detail">
+          <article class="exp-card active" data-i="0">
+            <p class="exp-meta">Sep 2026 – Present · Santa Clara, CA</p>
+            <h3>Concessions Operations Technology Intern</h3>
+            <p class="exp-org-big">Levy Restaurants · Levi's Stadium</p>
             <ul>
               <li>Support concessions technology and operations on 49ers home game days.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Jun – Aug 2025</span><span class="where">San Francisco, CA</span></div>
-          <div>
-            <h3>Dental Intern <span class="org">San Francisco Dental Wellness</span></h3>
+          </article>
+          <article class="exp-card" data-i="1">
+            <p class="exp-meta">Jun – Aug 2025 · San Francisco, CA</p>
+            <h3>Dental Intern</h3>
+            <p class="exp-org-big">San Francisco Dental Wellness</p>
             <ul>
               <li>Performed 30+ laser procedures and assisted with TMJ treatments under strict patient safety protocols.</li>
               <li>Prepared and sterilized 10–15 treatment rooms and 20+ instrument trays daily following infection control protocols.</li>
               <li>Verified insurance coverage and maintained accurate patient records to keep the clinic running smoothly.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">May – Aug 2020</span><span class="where">Oakland, CA</span></div>
-          <div>
-            <h3>COVID Screening Coordinator <span class="org">Geraldine A. Lim, D.D.S. &amp; Eric M. Yabu, D.D.S., Inc.</span></h3>
+          </article>
+          <article class="exp-card" data-i="2">
+            <p class="exp-meta">May – Aug 2020 · Oakland, CA</p>
+            <h3>COVID Screening Coordinator</h3>
+            <p class="exp-org-big">Geraldine A. Lim, D.D.S. &amp; Eric M. Yabu, D.D.S.</p>
             <ul>
               <li>Coordinated COVID-19 screenings for patients before dental appointments and kept accurate screening records.</li>
               <li>Worked with staff to roll out updated COVID-19 policies, and sterilized treatment rooms and equipment.</li>
             </ul>
-          </div>
-        </article>
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Service</span></div>
-          <div>
-            <dl class="more-work">
-              <div><dt>Barista <span>· Noodle Time, Santa Cruz</span></dt><dd>Jun – Aug 2025</dd></div>
-              <div><dt>Cashier <span>· i-Tea, Moraga</span></dt><dd>Jun 2022 – Aug 2023</dd></div>
-            </dl>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="leadership" class="section">
-      <h2 class="section-title"><span class="num">04</span>Leadership</h2>
-      <div class="timeline">
-        <article class="job reveal">
-          <div class="job-meta"><span class="when">Jan 2024 – Jun 2025</span><span class="where">Santa Cruz, CA</span></div>
-          <div>
-            <h3>alpha Kappa Delta Phi <span class="org">International Sorority · UC Santa Cruz Delta Chapter</span></h3>
-            <div class="roles">
-              <div class="role">
-                <div class="role-head"><h4>Vice President External</h4><span class="when">Jan – Jun 2025</span></div>
-                <ul>
-                  <li>Connected the chapter with the outside world: other aKDPhi chapters, campus organizations, and community partners, coordinating collaborations and representing the chapter externally.</li>
-                </ul>
-              </div>
-              <div class="role">
-                <div class="role-head"><h4>Vice President Internal</h4><span class="when">Jan – Jun 2025</span></div>
-                <ul>
-                  <li>Partnered with the President to run chapter operations for a 15–20 member chapter, meeting monthly with the Northwest Governor.</li>
-                  <li>Organized workshops on mental health, domestic violence, and Asian awareness, and mentored new officers to keep leadership continuous.</li>
-                </ul>
-              </div>
-              <div class="role">
-                <div class="role-head"><h4>Treasurer</h4><span class="when">Jan – Jun 2025</span></div>
-                <ul>
-                  <li>Managed chapter budgeting, expenses, and records, keeping event and fundraiser payments compliant with university and national rules.</li>
-                </ul>
-              </div>
-              <div class="role">
-                <div class="role-head"><h4>Fundraising Chair</h4><span class="when">Jul – Dec 2024</span></div>
-                <ul>
-                  <li>Ran three fundraisers, including “Boba for Boobs,” raising $1,000+ in revenue and $500+ net for breast cancer research.</li>
-                </ul>
-              </div>
-              <div class="role">
-                <div class="role-head"><h4>Convention Chair &amp; Co-Rush Chair</h4><span class="when">Jan – Dec 2024</span></div>
-                <ul>
-                  <li>Voting delegate for the UCSC Delta Chapter at the national convention; managed convention travel and budget.</li>
-                  <li>Helped plan recruitment events, logistics, and promotion for prospective members.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </article>
+          </article>
+          <article class="exp-card" data-i="3">
+            <p class="exp-meta">Jun – Aug 2025 · Santa Cruz, CA</p>
+            <h3>Barista</h3>
+            <p class="exp-org-big">Noodle Time</p>
+            <ul>
+              <li>Prepared and served drinks with friendly, efficient service during busy shifts.</li>
+            </ul>
+          </article>
+          <article class="exp-card" data-i="4">
+            <p class="exp-meta">Jun 2022 – Aug 2023 · Moraga, CA</p>
+            <h3>Cashier</h3>
+            <p class="exp-org-big">i-Tea</p>
+            <ul>
+              <li>Handled orders and payments, explained the menu to customers, and kept the store clean and welcoming.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section id="projects" class="section">
-      <h2 class="section-title"><span class="num">05</span>Projects</h2>
+      <h2 class="section-title"><span class="num">03</span>Projects</h2>
       <div class="filters">
         <button class="chip active" data-filter="all">All</button>
         <button class="chip" data-filter="ml">ML / AI</button>
@@ -401,7 +423,7 @@
     </section>
 
     <section id="music" class="section">
-      <h2 class="section-title"><span class="num">06</span>Music</h2>
+      <h2 class="section-title"><span class="num">04</span>Music</h2>
 
       <article class="kami reveal">
         <div class="kami-head">
