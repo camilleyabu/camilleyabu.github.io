@@ -194,15 +194,11 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
 .muted { color: var(--muted); font-size: .95rem; }
 
 /* About */
-.about-grid {
-  display: grid; grid-template-columns: 1.3fr 1fr; column-gap: 56px; row-gap: 32px;
-  grid-template-areas: "text photo" "text facts"; align-items: start;
-}
-.about-text { grid-area: text; }
-.facts { grid-area: facts; }
+.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
+.about-text::after { content: ""; display: block; clear: both; }
 .about-photo {
-  grid-area: photo; position: relative; margin: 0; max-width: 300px;
-  border-radius: 20px; overflow: hidden; border: 1px solid var(--line);
+  float: left; width: 210px; margin: 6px 28px 14px 0;
+  border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
   box-shadow: 0 20px 50px -24px color-mix(in srgb, var(--glow-a) 60%, transparent);
 }
 .about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
@@ -449,8 +445,8 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
   .g-b { right: -10%; top: 50%; }
   .celestial { width: 90vw; right: -28%; opacity: calc(var(--spark-on) * .4); }
   .lilies { width: 70vw; right: -18%; height: 60%; top: 64px; bottom: auto; opacity: calc(var(--lily-on) * .45); }
-  .about-grid { grid-template-columns: 1fr; grid-template-areas: "photo" "text" "facts"; }
-  .about-photo { max-width: 240px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo { width: 34%; max-width: 150px; margin: 4px 16px 8px 0; border-radius: 12px; }
   .job { grid-template-columns: 1fr; gap: 6px; }
   .exp-panel { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
