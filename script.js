@@ -52,6 +52,27 @@ document.querySelectorAll(".exp-panel").forEach((panel) => {
   }));
 });
 
+// ===== Mobile: show that the role list scrolls sideways =====
+document.querySelectorAll(".exp-list").forEach((list) => {
+  const n = list.querySelectorAll(".exp-item").length;
+  const hint = document.createElement("p");
+  hint.className = "swipe-hint";
+  hint.setAttribute("aria-hidden", "true");
+  list.after(hint);
+  const update = () => {
+    const end = list.scrollLeft + list.clientWidth >= list.scrollWidth - 4;
+    list.classList.toggle("scrolled", list.scrollLeft > 4);
+    list.classList.toggle("at-end", end);
+    hint.innerHTML = end
+      ? `<span class="arrow">←</span> Swipe back · all ${n} roles`
+      : `Swipe for more · ${n} roles <span class="arrow">→</span>`;
+  };
+  list.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  new ResizeObserver(update).observe(list);
+  update();
+});
+
 // ===== Skills: filter by source, hover to see where a skill comes from =====
 const SOURCES = {sierra:"Sierra Space",recat:"ReCat",handshake:"Handshake",algoverse:"Algoverse",projects:"Projects",courses:"Coursework"};
 const skills = document.querySelectorAll(".skill");
