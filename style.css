@@ -194,10 +194,9 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
 .muted { color: var(--muted); font-size: .95rem; }
 
 /* About */
-.about-grid { max-width: 780px; }
 .about-text::after { content: ""; display: block; clear: both; }
 .about-photo {
-  float: left; width: 230px; margin: 10px 34px 14px 6px;
+  float: right; width: 280px; margin: 10px 6px 16px 40px;
   border-radius: 999px 999px 14px 14px; overflow: hidden; border: 1px solid var(--line);
   outline: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 5px;
   box-shadow: 0 20px 50px -24px color-mix(in srgb, var(--glow-a) 60%, transparent);
@@ -444,7 +443,7 @@ main { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
   .g-b { right: -10%; top: 50%; }
   .celestial { width: 90vw; right: -28%; opacity: calc(var(--spark-on) * .4); }
   .lilies { width: 70vw; right: -18%; height: 60%; top: 64px; bottom: auto; opacity: calc(var(--lily-on) * .45); }
-  .about-photo { width: 34%; max-width: 150px; margin: 8px 18px 8px 5px; border-radius: 999px 999px 10px 10px; outline-offset: 4px; }
+  .about-photo { width: 46%; max-width: 200px; margin: 8px 5px 10px 18px; border-radius: 999px 999px 10px 10px; outline-offset: 4px; }
   .job { grid-template-columns: 1fr; gap: 6px; }
   .exp-panel { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
